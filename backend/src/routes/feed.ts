@@ -67,7 +67,7 @@ async function executeQueries(queries: ParsedQuery[]) {
 		.innerJoin(tUsers, eq(tChapters.uploaderUuid, tUsers.id))
 		.where(or(...queries.map(queryToSql)))
 		.orderBy(desc(tChapters.publishedAt))
-		.limit(200)
+		.limit(75)
 
 	const groupIds = Array.from(
 		new Set(results.flatMap(v => v.chapters.groupUuids ?? []))
