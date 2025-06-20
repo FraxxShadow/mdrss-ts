@@ -1,6 +1,11 @@
 {
+  "functions": {
+    "api/feed.ts": {
+      "runtime": "bun"
+    }
+  },
   "routes": [
-    { "src": "/feed", "dest": "/feed.html" },
+    { "src": "/feed", "dest": "/api/feed.ts" },
     { "src": "/", "dest": "/index.html" }
   ]
 }
